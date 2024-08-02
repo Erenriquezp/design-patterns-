@@ -3,7 +3,6 @@ package main.java.visitantes;
 import main.java.estrategias.DescuentoPorPaquete;
 import main.java.estrategias.DescuentosPorDocena;
 import main.java.estrategias.DescuentosStrategy;
-import main.java.productos.Producto;
 import main.java.productos.ProductoComposite;
 import main.java.productos.ProductoLeaf;
 
@@ -15,7 +14,6 @@ public class VisitorFacturacion implements Visitor {
     @Override
     public void visitar(ProductoLeaf producto) {
         total += producto.getPrecio();
-        System.out.println("total = " + total);
     }
 
     @Override
